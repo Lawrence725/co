@@ -1,0 +1,49 @@
+
+<html lang="zh-Hant">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>快一點 - 櫃檯點餐</title>
+<meta name="keywords" content="快一點 - 櫃檯點餐">
+<meta name="description" content="快一點 - 櫃檯點餐">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/standard.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+<form action="menu.html">
+<section class="pin_login flex_center flex_wrap">
+	<div class="logo"><img src="images/logo_white.png"></div>
+
+	<div class="box flex_center flex_wrap">
+		<h2>請輸入PIN碼</h2>
+		<div class="pic_code flex_center">
+			<input type="number" maxlength="1" value="">-
+			<input type="number" maxlength="1" value="">-
+			<input type="number" maxlength="1" value="">-
+			<input type="number" maxlength="1" value="">
+		</div>
+		<button type="submit" class="login_btn">登入</button>
+	</div>
+</section>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script>
+$(function(){
+	$('.pic_code input').keyup(function(){
+		if($(this).val() != ''){
+			$(this).next('input').focus();
+		}
+	});
+});
+</script>
+</body>
+</html>

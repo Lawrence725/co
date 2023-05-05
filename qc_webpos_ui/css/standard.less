@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,600,700|Roboto:400,500,600,700&display=swap");
+@import url("reset.css");
+@import url("swiper.min.css");
+@import url("jquery.modal.min.css");
+
+// color
+@color-cisbase: #f0941d;
+@color-white: #FFF;
+@color-black: #000;
+@color-normal: #474747;
+@color-dark: #282828;
+@color-light: #979797;
+@color-lighter: #C4C4C4;
+@color-lightist: #F6F6F6;
+@color-price: #CB5A4B;
+
+// img url
+@url: "../images/svg";
+
+// border
+.rounded-corners (@radius: 3px) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, p, a, select, input, textarea, button { font-family: "Roboto", "Noto Sans TC", "Microsoft JhengHei", "黑體", sans-serif, serif; 
+	color: @color-normal; font-size: 16px; font-weight: 400; letter-spacing: 0.5px; }
+
+/* jQuery Modal*/
+.jquery-modal.blocker { padding: 10px; background-color: rgba(0,0,0,0.5); z-index: 3; 
+	.modal { width: 100%; max-width: 600px; min-height: calc(100% - 20px); padding: 15px 25px 95px 25px; color: @color-normal; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 0; 
+		.close-modal { width: 36px !important; height: 36px !important; top: 10px !important; right: 10px !important; background: rgba(243,243,243,1) url("@{url}/close.svg") no-repeat center !important; background-size: 30% !important; .rounded-corners(99em); }
+	}
+}
+
+/* 常用 */
+main { padding-bottom: 80px; z-index: 0; }
+.container { width: 100%; margin: 0 auto; }
+.flex_center { display: flex; justify-content: center; align-items: center; }
+.flex_top { display: flex; align-items: flex-start; }
+.flex_wrap { flex-flow: wrap; }
+.hide { display: none; }
+.visible_hide { visibility: hidden; }
+.visible_show { visibility: visible; }
+
+/* loader */
+.loading_area { position: fixed; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; color: @color-light; background-color: rgba(255,255,255,0.9); z-index: 5; }
+.loader { width: 40px; height: 40px; margin: 5px; border: 6px solid @color-lighter; border-top: 6px solid @color-normal; .rounded-corners(50%); animation: loading 2s linear infinite; }
+@keyframes loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* overlay_for_mobile */
+.overlay_for_mobile { display: none; position: fixed; width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; margin: auto; color: @color-cisbase; background-color: @color-dark; z-index: 5; 
+	.attention { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+}
+/* pad */
+@media (max-width: 640px) {
+	.overlay_for_mobile { display: block; }
+}
+
+/* login */
+.pin_login {
+	width: 100%; height: 100%; background: @color-cisbase;
+	.logo { width: 100%; height: 80px;
+		img { display: block; width: auto; height: 100%; margin: 0 auto; }
+	}
+	.box { width: 100%; height: 50px; margin-top: -40%; line-height: 50px;
+		h2 { width: 100%; font-size: 24px; color: @color-white; text-align: center; }
+		.pic_code { width: 100%; color: @color-white; 
+			input { width: 40px; margin: 0 10px; padding: 10px; color: @color-cisbase; font-size: 24px; text-align: center; .rounded-corners(5px); box-shadow:inset -5px 5px 5px -5px rgba(0,0,0,0.5); }
+		}
+		.login_btn { margin-top: 20px; padding: 10px 50px; color: @color-white; font-size: 18px; background: @color-dark; .rounded-corners(5px); box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+	}
+}
+
+/* web pos */
+.container.flex_center { flex-flow: nowrap; justify-content: space-between; align-items: flex-start; width: 100%; height: 100%; overflow: hidden;
+	> section { position: relative; }
+	.title { position: sticky; width: 100%; top: 0; left: 0; right: 0; padding: 10px 5px; text-align: center; font-size: 18px; white-space: nowrap; background: @color-white; border-bottom: 1px solid @color-lighter; }
+}
+
+.left_bar { width: 85px; height: 100%; padding: 10px 0; color: @color-cisbase; text-align: center; background: @color-dark; 
+	.date { font-size: 32px; letter-spacing: -0.5px; }
+	.logo { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 5px;
+		img { width: 100%; height: auto; }
+	}
+	.tab { margin-top: 20px;
+		a { display: block; padding: 15px 0; color: @color-light; font-size: 18px; line-height: 32px; 
+			i { font-size: 24px; }
+		}
+		a.current { color: @color-white; background: @color-cisbase; }
+		select { display: none; width: 100%; padding: 10px; color: @color-cisbase; text-align: center; text-align-last: center; background: none; border: 2px solid @color-cisbase; }
+		a.current + select { display: block; }
+	}
+}
+
+.menu_category { width: 160px; height: 100%; background: @color-white; border-right: 1px solid @color-lighter; overflow-y: auto; overflow-x: hidden;
+	.category { width: 100%;
+		a { display: block; padding: 10px 15px; }
+		a.current { color: @color-cisbase; }
+	}
+}
+
+.main_menu { width: calc(75% - 245px); height: 100%; background: @color-white; border-right: 1px solid @color-lighter; 
+	.product { width: 100%; height: 50%; padding: 0; overflow-y: auto; overflow-x: hidden;
+		.flex_center.flex_wrap { margin: 10px 0; padding: 0 10px; justify-content: space-around;
+			a { width: 30%; margin: 8px 0 7px 0; padding: 10px; .rounded-corners(5px); background: @color-lightist;
+				.price { display: block; color: @color-price; font-size: 12px; 
+					b { font-size: 18px; font-weight: normal; }
+				}
+			}
+			a.current { background: @color-white; border: 2px solid @color-cisbase; }
+		}
+	}
+
+	.add_option { width: 100%; height: 50%; padding: 10px 15px; background: @color-lightist; overflow-y: auto; overflow-x: hidden;
+		.group { margin: 10px 0;
+			.tag { display: inline-block; margin-right: 10px; }
+		}
+
+		.swiper-container { width: 100%; height: calc(100% - 45px); overflow: visible; }
+		.swiper-slide { display: flex; flex-flow: wrap; justify-content: space-around; align-items: flex-start; 
+			a { width: calc(20% - 10px); height: calc(25% - 15px); margin: 8px 5px 7px 5px; padding: 8px; line-height: 18px; .rounded-corners(5px); background: @color-white; overflow: hidden; }
+			a.fixed_item { color: @color-white; background: @color-price; }
+			a.current { color: @color-white; background: @color-cisbase; }
+		}
+		.swiper-pagination { bottom: -45px; }
+		.swiper-pagination-bullet { width: 40px; height: 40px; margin: 0 10px; color: @color-cisbase; text-align: center; line-height: 36px; font-size: 18px; background: @color-white; border: 2px solid @color-cisbase; opacity: 1; }
+		.swiper-pagination-bullet-active { color: @color-white; background: @color-cisbase; }
+	}
+}
+
+.order_cart { width: 25%; height: 100%; background: @color-white; }
+
+/* 加購單選/複選 */
+.the_radio, .the_checkbox { display: inline-block;
+	input[type=checkbox], input[type=radio] { display: none; }
+	label { display: block; min-width: 30px; margin: 5px; padding: 5px 15px; border: 2px solid @color-lighter; .rounded-corners(25px); cursor: pointer; }
+	input[type=radio]:checked + label, input[type=checkbox]:checked + label { color: @color-white; border-color: @color-cisbase; background-color: @color-cisbase; }
+}
+
+.crumbs { margin: 10px 0; }
+.sys_btn { position: sticky; bottom: -10px; left: 0; right: 0; margin: 20px auto 0 auto; padding: 10px; background: @color-white; 
+	.confirm { display: block; min-width: 150px; padding: 10px 20px; color: @color-white; text-align: center; background: @color-cisbase; .rounded-corners(25px); }
+}
+
+/* 加購選項modal */
+.food_items { position: relative; padding-bottom: 50px;
+	.crumbs { margin: 10px 0; }
+	.title { margin: 20px 0 5px 0; font-weight: bold;
+		.must { color: @color-cisbase; }
+	}
+}
+
+/* 備註modal */
+.food_memo { position: relative; padding-bottom: 50px;
+	textarea { margin: 10px 0; padding: 10px; width: 100%; height: 200px; background: @color-lightist; .rounded-corners(5px); }
+}
+
+/* 清空餐點 */
+.delete_all { position: sticky; top: 0; height: 45px; text-align: center; background: @color-white; border-bottom: 1px solid @color-lighter;
+	a { display: inline-block; padding: 10px; color: @color-cisbase; text-decoration: underline; }
+}
+
+/* 購物車訂單 */
+.cart { height: 60%; overflow-y: auto; overflow-x: hidden; 
+	a { display: block; position: relative; padding: 15px;
+		.name { margin-bottom: 5px; }
+		.options { margin-bottom: 5px;
+			i { display: inline-block; padding: 2px 5px; margin: 0 3px 3px 0; font-size: 13px; font-style: normal; color: @color-light; border: 1px solid @color-lighter; .rounded-corners(25px); }
+		}
+		.delete { display: none; position: absolute; width: 30px; height: 30px; padding: 5px; right: -2px; top: -2px; color: @color-white; font-size: 20px; text-align: center; line-height: 30px; background: @color-cisbase; }
+		.subtotal { justify-content: space-between;
+			.input_quantity { border: 1px solid @color-lighter;
+				button { font-size: 13px; height: 20px; color: @color-normal; }
+				input { width: 35px; text-align: center; }
+			}
+			.price { white-space: nowrap; font-size: 13px;
+				del { color: @color-lighter; font-size: 13px; }
+				b { font-size: 20px; }
+			}
+		}
+	}
+	a.current { border: 2px solid @color-cisbase; 
+		.delete { display: block; }
+	}
+}
+
+/* 訂單結算 */
+.total { position: relative; height: calc(40% - 90px); padding-bottom: 60px; border-top: 1px solid @color-lighter;
+	.flex_center.flex_wrap { width: 100%; height: 100%; padding: 10px; justify-content: space-between; overflow-y: auto; overflow-x: hidden; 
+		> div { width: 100%; justify-content: space-between; 
+			.discount { color: @color-price; }
+			span > b { font-size: 20px; }
+		}
+	}
+	.submit { position: absolute; width: 100%; height: 60px; padding: 10px; bottom: 0; left: 0; right: 0; color: @color-white; font-size: 18px; font-weight: bold; text-align: center; line-height: 40px; background: @color-cisbase; }
+}
+
+/* 結帳成功訂單內容 */
+.finish_msg {
+	h1 { margin: 20px auto; color: @color-cisbase; font-size: 32px; font-weight: bold; text-align: center; }
+	h2,h3 { font-size: 24px; }
+	h4 { margin-top: 20px; color: @color-light; border-bottom: 1px solid @color-lighter; }
+	.order { height: 60%; overflow-y: auto; overflow-x: hidden; 
+		a { display: block; position: relative; padding: 15px; border-bottom: 1px solid @color-lighter;
+			.name { margin-bottom: 5px; }
+			.options { margin-bottom: 5px;
+				i { display: inline-block; padding: 2px 5px; margin: 0 3px 3px 0; font-size: 13px; font-style: normal; color: @color-light; border: 1px solid @color-lighter; .rounded-corners(25px); }
+			}
+			.subtotal { justify-content: space-between;
+				.input_quantity::before { content: "x"; }
+				.price { white-space: nowrap; color: @color-price; font-size: 13px;
+					del { color: @color-lighter; font-size: 13px; }
+					b { font-size: 20px; }
+				}
+			}
+		}
+	}
+}
