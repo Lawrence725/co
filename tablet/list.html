@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>愛點餐點 - 櫃檯點餐</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Google Icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body list">
+            <!-- Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <div class="itemV">
+                    <div class="box text">
+                        <span class="fS">2021</span>
+                        <span class="fXL bold">12/6</span>
+                        <span class="fS">星期一</span>
+                        <span class="fS">PM 2:05</span>
+                    </div>
+                    <a class="box" href="index.html"> <!-- class: active -->
+                        <div class="icon"><i class="fas fa-chair fa-lg"></i></div>
+                        <span class="fL">內用</span>
+                    </a>
+                    <div class="itemV"> <!-- class: active -->
+                        <div class="dropdown">
+                            <select name="type" class="fM">
+                                <option value="桌號 1">桌號 1</option>
+                                <option value="桌號 2">桌號 2</option>
+                            </select>
+                        </div>
+                        <a id="buttonHead" class="button white"><span class="fM single">人數 X</span></a>
+                        <a id="buttonMember" class="button white"><span class="fM single">會員</span></a>
+                    </div>
+                    <a class="box"> <!-- class: active -->
+                        <div class="icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
+                        <span class="fL">外帶</span>
+                    </a>
+                </div>
+                <div class="itemV">
+                    <div class="itemV active"> <!-- class: active -->
+                        <a id="buttonList" class="button white"><span class="fM single">訂單平台</span></a>
+                    </div>
+                    <a class="box active" href="list.html"> <!-- class: active -->
+                        <div class="icon"><i class="fas fa-clipboard-list fa-lg"></i></div>
+                        <span class="fL">訂單列表</span>
+                    </a>
+                    <!-- <a class="box" href="scan.html"> class: active
+                        <div class="icon"><span class="material-icons md-36">qr_code_scanner</span></div>
+                    </a> -->
+                    <a id="menuOn" class="box text">
+                        <div class="icon"><i class="fas fa-bars fa-2x"></i></div>
+                    </a>
+                </div>
+                <!-- Menu -->
+                <div id="menu" class="menu">
+                    <a id="menuOff" class="box text">
+                        <div class="icon"><i class="fas fa-chevron-left fa-2x"></i></div>
+                    </a>
+                    <a class="box">
+                        <div class="icon"><i class="fas fa-expand-arrows-alt fa-lg"></i></div>
+                        <span class="fL">全螢幕</span>
+                    </a>
+                    <div class="box">
+                        <span class="fM bold speed">200mb/s</span>
+                        <span class="fL">網路速度</span>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-id-card-alt fa-lg"></i></div>
+                        <span class="fL single">陳大文陳大文</span>
+                    </div>
+                    <a class="box">
+                        <div class="icon"><i class="fas fa-sign-out-alt fa-lg"></i></div>
+                        <span class="fL">登出</span>
+                    </a>
+                </div>
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <div class="mHeader">
+                    <table class="fM">
+                        <tr class="first">
+                            <th><span>訂單平台</span></th>
+                            <th><span>訂單編號</span></th>
+                            <th><span>下單時間</span></th>
+                            <th><span>取餐編號</span></th>
+                            <th><span>付款方式</span></th>
+                            <th><span>取餐方式</span></th>
+                            <th><span>訂單總計</span></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="mMain">
+                    <table class="fM">
+                        <tr class="fake">
+                            <th><span>訂單平台</span></th>
+                            <th><span>訂單編號</span></th>
+                            <th><span>下單時間</span></th>
+                            <th><span>取餐編號</span></th>
+                            <th><span>付款方式</span></th>
+                            <th><span>取餐方式</span></th>
+                            <th><span>訂單總計</span></th>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <div class="img">
+                                    <img src="img/favicon.svg">
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span>876543</span>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <span class="fS">2021/8/15</span>
+                                    <span>PM 6:20</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV middle number">
+                                    <span>1</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-cash-register"></i></div>
+                                    <span>現場付款</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-chair"></i></div>
+                                    <span>內用</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span class="error">$150</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <div class="img">
+                                    <img src="img/qc.png">
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span>876543</span>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <span class="fS">2021/8/15</span>
+                                    <span>PM 6:20</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV middle number">
+                                    <span>1</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV middle">
+                                    <div class="icon gray"><i class="far fa-credit-card"></i></div>
+                                    <span>線上付款</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-shopping-bag"></i></div>
+                                    <span>外帶</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span class="error">$150</span>
+                            </td>
+                        </tr>
+                        <tr class="checked">
+                            <td align="center">
+                                <div class="img">
+                                    <img src="img/GoFoodie.webp">
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span>876543</span>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <span class="fS">2021/8/15</span>
+                                    <span>PM 6:20</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV middle number">
+                                    <span>1</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-cash-register"></i></div>
+                                    <span>現場付款</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-chair"></i></div>
+                                    <span>內用</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span class="error">$150</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <div class="img">
+                                    <img src="img/UberEats.png">
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span>876543</span>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <span class="fS">2021/8/15</span>
+                                    <span>PM 6:20</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV middle number">
+                                    <span>1</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV middle">
+                                    <div class="icon gray"><i class="far fa-credit-card"></i></div>
+                                    <span>線上付款</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-shopping-bag"></i></div>
+                                    <span>外帶</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span class="error">$150</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <div class="img">
+                                    <img src="img/Foodpanda.png">
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span>876543</span>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <span class="fS">2021/8/15</span>
+                                    <span>PM 6:20</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV middle number">
+                                    <span>1</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-cash-register"></i></div>
+                                    <span>現場付款</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <div class="itemV">
+                                    <div class="icon gray"><i class="fas fa-chair"></i></div>
+                                    <span>內用</span>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <span class="error">$150</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section class="footer">
+                <div class="fHeader">
+                    <div class="input">
+                        <div class="icon disabled"><i class="fas fa-search"></i></div>
+                        <input type="text" class="fM" placeholder="搜尋" value="">
+                    </div>
+                </div>
+                <div class="fMain">
+                    
+                </div>
+                <div class="fFooter">
+                    <div class="itemH width payment"> <!-- 發票已列印 class: disabled-->
+                        <a class="button itemV">
+                            <div class="icon white"><i class="fas fa-receipt"></i></div>
+                            <span class="fL">重開發票</span> <!-- 發票已列印 -->
+                        </a>
+                        <div class="lineV"></div>
+                        <a class="button itemV">
+                            <div class="icon white"><i class="fas fa-print"></i></div>
+                            <span class="fL">重印訂單</span> <!-- 發票已列印 -->
+                        </a>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL">發票</span>
+                        <span class="fL bold">NB-12345678</span>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL">統編</span>
+                        <span class="fL bold">87654321</span>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL">載具</span>
+                        <span class="fL bold">/ABCDEFG</span>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL">小計</span>
+                        <div class="itemH">
+                            <span class="fS">$</span>
+                            <span class="fL bold">295</span>
+                        </div>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL error">整單折扣</span>
+                        <div class="itemH">
+                            <span class="fS error">-$</span>
+                            <span class="fL error bold">12</span>
+                        </div>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL primary">總計</span>
+                        <div class="itemH">
+                            <span class="fS primary">$</span>
+                            <span class="fL primary bold">283</span>
+                        </div>
+                    </div>
+                    <div class="itemH between width margin">
+                        <span class="fL nowrap margin">調帳</span>
+                        <div class="input">
+                            <a class="switch itemH">
+                                <div class="icon"><i class="fas fa-plus fa-sm"></i></div>
+                                <div class="icon off"><i class="fas fa-minus fa-sm"></i></div>
+                            </a>
+                            <span class="fM margin">$</span>
+                            <input type="text" class="fM" placeholder="10" value="">
+                            <a class="button"><span class="fM">確認</span></a>
+                        </div>
+                    </div>
+                    <div class="itemH width cancel">
+                        <a id="buttonCancel" class="button delete">
+                            <div class="icon"><i class="far fa-times-circle error"></i></div>
+                            <span class="fL">取消訂單</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- Popup (Cancel) -->
+            <section id="popCancel" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fXL">取消訂單</span>
+                    </section>
+                    <section class="popMain">
+                        <span class="fL">確定要取消訂單？</span>
+                        <span class="fL">一旦取消將無法恢復</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel"><span class="fM">放棄</span></a>
+                        <a class="button delete"><span class="fM">取消訂單</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (訂單列表) -->
+            <section id="popList" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fXL">訂單平台</span>
+                    </section>
+                    <section class="popMain">
+                        <a class="itemV width center middle margin padding active"> <!-- class: active -->
+                            <div class="img shadow circle"><img src="img/favicon.svg"></div>
+                            <span class="fM">愛點餐飲</span>
+                        </a>
+                        <a class="itemV width center middle margin padding"> <!-- class: active -->
+                            <div class="img"><img src="img/qc.png"></div>
+                            <span class="fM">快一點</span>
+                        </a>
+                        <a class="itemV width center middle margin padding"> <!-- class: active -->
+                            <div class="img"><img src="img/GoFoodie.webp"></div>
+                            <span class="fM">GoFoodie</span>
+                        </a>
+                        <a class="itemV width center middle margin padding"> <!-- class: active -->
+                            <div class="img"><img src="img/UberEats.png"></div>
+                            <span class="fM">UberEats</span>
+                        </a>
+                        <a class="itemV width center middle margin padding"> <!-- class: active -->
+                            <div class="img"><img src="img/Foodpanda.png"></div>
+                            <span class="fM">FoodPanda</span>
+                        </a>
+                        <!-- <a class="itemV width center middle margin padding active"> class: active
+                            <span class="fL">其他<br>平台</span>
+                        </a> -->
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel"><span class="fM">取消</span></a>
+                        <a class="button submit"><span class="fM">確認</span></a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="list.js"></script>
+    </body>
+</html>

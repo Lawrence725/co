@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>訂單查詢</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body">
+            <!-- Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <div class="itemV center">
+                    <span class="fL primary">取餐編號</span>
+                    <span class="fL primary bold">1</span>
+                </div>
+                <div class="itemV center">
+                    <span class="fL primary">訂單編號</span>
+                    <span class="fL primary bold">123456</span>
+                </div>
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <div class="receipt itemV center width padding margin">
+                    <span class="fXL margin">快一點快炒小吃</span>
+                    <span class="fXL margin">電子發票證明聯</span>
+                    <div class="itemH margin">
+                        <span class="fXXL sans">109</span>
+                        <span class="fXXL">年</span>
+                        <span class="fXXL sans">09-10</span>
+                        <span class="fXXL">月</span>
+                    </div>
+                    <span class="fXXL margin sans">NB-12345678</span>
+                    <div class="itemH width between margin">
+                        <span class="fL sans">2020-10-09 18:27:13</span>
+                        <span class="fL">總計：<span class="sans">987</span></span>
+                    </div>
+                    <div class="itemH width between margin">
+                        <span class="fL">賣方：<span class="sans">87654321</span></span>
+                        <span class="fL">買方：<span class="sans">87654321</span></span>
+                    </div>
+                </div>
+                <span class="fM margin">已入載具：/87654321</span>
+                <span class="fM margin">已列印：2020-10-09 18:27:13</span>
+                <div class="input">
+                    <a class="switch itemH">
+                        <div class="icon"><i class="fas fa-plus"></i></div>
+                        <div class="icon off"><i class="fas fa-minus"></i></div>
+                    </a>
+                    <span class="fL margin">$</span>
+                    <input type="text" class="fL" placeholder="店家調帳" value="">
+                    <a class="button"><span class="fM">確認調帳</span></a>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section class="footer">
+                <!-- Button -->
+                <a id="buttonLarge" class="button submit">
+                    <div class="icon"><i class="fas fa-receipt"></i></div>
+                    <span class="fL">重開發票</span>
+                </a>
+                <a id="buttonCancel" class="button delete">
+                    <div class="icon"><i class="far fa-times-circle"></i></div>
+                    <span class="fL">取消訂單</span>
+                </a>
+            </section>
+            <!-- Popup (Cancel) -->
+            <section id="popCancel" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fL">取消訂單</span>
+                    </section>
+                    <section class="popMain">
+                        <span class="fM">確定要取消訂單？</span>
+                        <span class="fM">一旦取消將無法恢復</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel"><span class="fS">放棄</span></a>
+                        <a class="button delete"><span class="fS">取消訂單</span></a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="index.js"></script>
+    </body>
+</html>

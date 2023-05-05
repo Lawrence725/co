@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>愛點餐點 - 櫃檯點餐</title>
+        <link rel="icon" type="image/png" href="img/favicon.svg"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Google Icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body index">
+            <!-- Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <div class="itemV">
+                    <div class="box text">
+                        <span class="fS">2021</span>
+                        <span class="fXL bold">12/6</span>
+                        <span class="fS">星期一</span>
+                        <span class="fS">PM 2:05</span>
+                    </div>
+                    <a class="box active" href="index.html"> <!-- class: active -->
+                        <div class="icon"><i class="fas fa-chair fa-lg"></i></div>
+                        <span class="fL">內用</span>
+                    </a>
+                    <div class="itemV active"> <!-- class: active -->
+                        <div class="dropdown">
+                            <select name="type" class="fM">
+                                <option value="桌號 1">桌號 1</option>
+                                <option value="桌號 2">桌號 2</option>
+                            </select>
+                        </div>
+                        <a id="buttonHead" class="button white"><span class="fM single">人數 X</span></a>
+                        <a id="buttonMember" class="button white"><span class="fM single">會員</span></a>
+                    </div>
+                    <a class="box"> <!-- class: active -->
+                        <div class="icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
+                        <span class="fL">外帶</span>
+                    </a>
+                </div>
+                <div class="itemV">
+                    <div class="itemV"> <!-- class: active -->
+                        <a id="buttonList" class="button white"><span class="fM single">訂單平台</span></a>
+                    </div>
+                    <a class="box" href="list.html"> <!-- class: active -->
+                        <div class="icon"><i class="fas fa-clipboard-list fa-lg"></i></div>
+                        <span class="fL">訂單列表</span>
+                    </a>
+                    <!-- <a class="box" href="scan.html"> class: active
+                        <div class="icon"><span class="material-icons md-36">qr_code_scanner</span></div>
+                    </a> -->
+                    <a id="menuOn" class="box text">
+                        <div class="icon"><i class="fas fa-bars fa-2x"></i></div>
+                    </a>
+                </div>
+                <!-- Menu -->
+                <div id="menu" class="menu">
+                    <a id="menuOff" class="box text">
+                        <div class="icon"><i class="fas fa-chevron-left fa-2x"></i></div>
+                    </a>
+                    <a class="box">
+                        <div class="icon"><i class="fas fa-expand-arrows-alt fa-lg"></i></div>
+                        <span class="fL">全螢幕</span>
+                    </a>
+                    <div class="box">
+                        <span class="fM bold speed">200mb/s</span>
+                        <span class="fL">網路速度</span>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-id-card-alt fa-lg"></i></div>
+                        <span class="fL single">陳大文陳大文</span>
+                    </div>
+                    <a class="box">
+                        <div class="icon"><i class="fas fa-sign-out-alt fa-lg"></i></div>
+                        <span class="fL">登出</span>
+                    </a>
+                </div>
+            </section>
+            <!-- Sub Header -->
+            <section class="subHeader">
+
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <div class="mHeader">
+                    <span class="fL">店名</span>
+                    <a id="buttonSycn" class="icon"><i class="fas fa-sync-alt"></i></a>
+                </div>
+                
+            </section>
+            <!-- Footer -->
+            <section class="footer">
+                <div class="fHeader">
+                    <div class="itemV center width margin padding"><span class="fL">已點</span></div>
+                    <a id="settingOn" class="button delete"><span class="fM">整單設定</span></a>
+                </div>
+                <div class="fHeader">
+                    <a class="textButton fL primary under">清空餐點</a>
+                </div>
+                <div class="fMain">
+
+                </div>
+                <div class="fFooter">
+                    <div class="itemH width payment">
+                        <a class="button cash">
+                            <div class="icon white"><i class="fas fa-dollar-sign"></i></div>
+                            <span class="fM">現金結帳</span>
+                        </a>
+                        <a id="paymentOn" class="button white other">
+                            <span class="fS single">其他支付</span>
+                        </a>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL">小計</span>
+                        <div class="itemH">
+                            <span class="fS">$</span>
+                            <span class="fL bold">295</span>
+                        </div>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL error">訂單折扣</span>
+                        <div class="itemH">
+                            <span class="fS error">-$</span>
+                            <span class="fL error bold">12</span>
+                        </div>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL">訂單加購</span>
+                        <div class="itemH">
+                            <span class="fS">$</span>
+                            <span class="fL bold">0</span>
+                        </div>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL">服務費 10%</span>
+                        <div class="itemH">
+                            <span class="fS">$</span>
+                            <span class="fL bold">28</span>
+                        </div>
+                    </div>
+                    <div class="itemH between width padding margin">
+                        <span class="fL primary">總計</span>
+                        <div class="itemH">
+                            <span class="fS primary">$</span>
+                            <span class="fL primary bold">283</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="payment" class="fMenu">
+                    <div class="itemV padding">
+                        <span class="fS gray">點選即送出訂單</span>
+                    </div>
+                    <div class="itemH width height">
+                        <a class="button white">
+                            <span class="fL">其他</span>
+                        </a>
+                        <a class="button white">
+                            <div class="img"><img src="img/taiwanpay.svg"></div>
+                        </a>
+                    </div>
+                    <div class="itemH width height">
+                        <a class="button white">
+                            <div class="img"><img src="img/easywallet.svg"></div>
+                        </a>
+                        <a class="button white">
+                            <div class="img"><img src="img/jkopay.svg"></div>
+                        </a>
+                    </div>
+                    <div class="itemH width height">
+                        <a class="button white">
+                            <div class="img"><img src="img/linepay.svg"></div>
+                        </a>
+                        <a class="button white">
+                            <div class="icon black"><i class="far fa-credit-card"></i></div>
+                            <span class="fM">信用卡</span>
+                        </a>
+                    </div>
+                </div>
+                <div id="setting" class="fMenu">
+                    <a class="button delete between">
+                        <div class="itemH">
+                            <div class="icon"><i class="fas fa-plus-circle"></i></div>
+                            <span class="fL">訂單加購</span>
+                        </div>
+                        <span class="fL">2</span>
+                    </a>
+                    <a class="button delete between">
+                        <div class="itemH">
+                            <div class="icon"><i class="fas fa-sticky-note"></i></div>
+                            <span class="fL">訂單備註</span>
+                        </div>
+                        <div class="icon"><i class="fas fa-check"></i></div>
+                    </a>
+                    <a class="button delete between">
+                        <div class="itemH">
+                            <div class="icon"><i class="fas fa-tags"></i></div>
+                            <span class="fL">訂單折扣</span>
+                        </div>
+                        <span class="fL">-$12</span>
+                    </a>
+                    <div class="itemH receipt">
+                        <div class="icon white"><i class="fas fa-mobile"></i></div>
+                        <span class="fL white nowrap margin">手機載具</span>
+                        <div class="input center">
+                            <input type="text" class="fL" placeholder="/ABCDEFG" value="">
+                        </div>
+                    </div>
+                    <div class="itemH receipt">
+                        <div class="icon white"><i class="fas fa-receipt"></i></div>
+                        <span class="fL white nowrap margin">統一編號</span>
+                        <div class="input center">
+                            <input type="text" class="fL" placeholder="ABCDEFG" value="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Popup (人數) -->
+            <section id="popHead" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fXL">內用人數</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="itemV">
+                            <span class="fL margin">小孩</span>
+                            <div class="itemH">
+                                <a class="button white"><span class="fXL">0</span></a>
+                                <a class="button white active"><span class="fXL">1</span></a>
+                            </div>
+                            <div class="itemH">
+                                <a class="button white"><span class="fXL">2</span></a>
+                                <a class="button white"><span class="fXL">3</span></a>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="fXL" placeholder="自行輸入" value="">
+                            </div>
+                        </div>
+                        <div class="itemV margin padding"></div>
+                        <div class="itemV">
+                            <span class="fL margin">大人</span>
+                            <div class="itemH">
+                                <a class="button white"><span class="fXL">1</span></a>
+                                <a class="button white active"><span class="fXL">2</span></a>
+                                <a class="button white"><span class="fXL">3</span></a>
+                            </div>
+                            <div class="itemH">
+                                <a class="button white"><span class="fXL">4</span></a>
+                                <a class="button white"><span class="fXL">5</span></a>
+                                <a class="button white"><span class="fXL">6</span></a>
+                            </div>
+                            <div class="itemH">
+                                <div class="input">
+                                    <input type="text" class="fXL" placeholder="自行輸入" value="">
+                                </div>
+                                <a class="button delete"><span class="fL">全部<br>清空</span></a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel"><span class="fM">取消</span></a>
+                        <a class="button submit"><span class="fM">確認</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (會員) -->
+            <section id="popMember" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fXL">會員資料</span>
+                        <span class="fL error">未註冊會員，輸入電話姓名以加入會員</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="itemV width">
+                            <div class="input">
+                                <div class="icon"><i class="fas fa-mobile"></i></div>
+                                <input type="text" class="fL" placeholder="電話" value="">
+                            </div>
+                            <div class="input">
+                                <div class="icon"><i class="fas fa-user"></i></div>
+                                <input type="text" class="fL" placeholder="姓名" value="">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel"><span class="fM">取消</span></a>
+                        <a class="button submit"><span class="fM">確認</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (菜單同步) -->
+            <section id="popSycn" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fXL">菜單同步</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="icon error"><i class="fas fa-exclamation-circle fa-3x"></i></div>
+                        <span class="fL center">菜單內容有所更新<br>請更新版本，以利系統正常運作。</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel"><span class="fM">稍後再說</span></a>
+                        <a class="button submit"><span class="fM">立即更新</span></a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="index.js"></script>
+    </body>
+</html>
